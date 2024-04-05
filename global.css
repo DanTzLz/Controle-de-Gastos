@@ -1,0 +1,33 @@
+.clear{
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.solid{
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    color: rgba(0, 206, 161, 0.993);
+    
+}
+.outline{
+    background-color: transparent;
+    border-radius: 3px;
+    color: white;
+    border: 1px solid white;
+}
+
+button:active{
+    opacity: 0.8;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
+
+.error{
+    color: white;
+    background-color: red;
+    display: none;
+}

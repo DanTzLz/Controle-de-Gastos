@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./global.css">
+
+    <title>Controle de Gastos</title>
+</head>
+<body>
+    <form>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()"> 
+            <div class="error" id="email-required-error"> Email é obrigatório</div>
+            <div class="error" id="email-invalid-error"> Email é invalido</div>
+        </div>
+        <div class="form-field"> 
+            <div><label>Senha</label></div>
+
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()">
+
+            <div class="error" id="password-required-error"> Senha é obrigatório</div>
+        </div>
+        <div>
+            <button type="button" class="clear" disabled="true" id="recover-password-button">Recuperar Senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" disabled="true" id="login-button" onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+    <script src="./validations.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAn7LhmGKDzmC8_v8PsbFM3tNBHyYwuW4Q",
+            authDomain: "controle-de-gastos-7f04f.firebaseapp.com",
+            projectId: "controle-de-gastos-7f04f",
+            storageBucket: "controle-de-gastos-7f04f.appspot.com",
+            messagingSenderId: "439155650781",
+            appId: "1:439155650781:web:cfd245fce6d20315886b34"
+        };
+        firebase.initializeApp(firebaseConfig);
+      
+    </script>;
+
+
+    
+</body>
+</html>
