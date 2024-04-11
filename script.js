@@ -1,11 +1,11 @@
 const form = {
-    email: () => document.getElementById('email'),
-    emailInvalidError: () => document.getElementById('email-invalid-error'),
-    emailRequiredError: () => document.getElementById('email-required-error'),
-    loginButton: ()=> document.getElementById('login-button'),
-    password: () => document.getElementById('password'),
-    passwordRequireError: () => document.getElementById('password-required-error'),
-    recoverPassword: () => document.getElementById('recover-password-button')
+    email:                  () => document.getElementById('email'),
+    emailInvalidError:      () => document.getElementById('email-invalid-error'),
+    emailRequiredError:     () => document.getElementById('email-required-error'),
+    loginButton:            () => document.getElementById('login-button'),
+    password:               () => document.getElementById('password'),
+    passwordRequireError:   () => document.getElementById('password-required-error'),
+    recoverPassword:        () => document.getElementById('recover-password-button')
 }
 
 function onChangeEmail(){
@@ -35,6 +35,9 @@ function login(){
 function getErrorMessage(error){
     if (error.code == "auth/invalid-credential"){
         return "Usuário não encontrado";
+    }
+    if(error.code == "auth/whong-password"){
+        return "Senha inválida";
     }
     return error.message;
 }

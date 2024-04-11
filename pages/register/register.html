@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="register.css">
+
+    <title>Registrar - Controle de Gastos</title>
+</head>
+<body class="centralize">
+    <form >
+        <div class="form-field">
+            <div><label >Email</label></div>
+            <input 
+            type="email" 
+            id="email"
+            placeholder="sou@email.com" 
+            onchange="onChangeEmail()">
+
+            <div class="error" id="email-required-error">
+                Email é obrigatório
+            </div>
+            <div class="error" id="email-invalid-error">
+                Email é invalido
+            </div>
+        </div>  
+
+        <div>
+            <div><label >Senha</label></div>
+            <input 
+            type="password"  
+            id="password" 
+            placeholder="Senha"
+            onchange="onChangePassword()">
+
+            <div class="error" id="password-required-error">
+                Senha é obrigatório
+            </div>
+            <div class="error" id="password-min-lenght-error"> 
+                Senha deve ter pelo menos 6 caracteres
+            </div>
+        </div>
+
+        <div>
+            <div><label >Confirmar Senha</label></div>
+            <input 
+                type="password" 
+                id="confirmPassword" 
+                placeholder="Confirmar senha" 
+                onchange="onChangeConfirmPassword()">
+
+            <div class="error" id="password-doesnt-match-error">
+                Senha e Confirmar senha deve ser iguais
+            </div>
+        </div>
+        <div>
+            <button type="button" class="solid" disabled="true">Registrar</button>
+        </div>
+        <div>
+            <button type="button" class="clear">Login</button>
+        </div>
+    </form>
+</body>
+
+<script src="register.js"></script>
+<script src="../../validations.js"></script>
+
+</html>

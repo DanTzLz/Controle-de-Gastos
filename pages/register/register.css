@@ -3,13 +3,21 @@ body{
     height: 90vh;
 }
 
+body{
+    background-color: rgba(1, 89, 172, 0.993);
+    height: 90vh;
+}
+
+
 input{
     border: none;
     border-radius: 3px;
-    
+    margin-bottom: 5px;
 }
 
 button{
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-top: 5px;
 }
+
+
